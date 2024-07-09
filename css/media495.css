@@ -1,0 +1,52 @@
+@media screen and (max-width: 495px){
+    @import url(main.css);
+    @import url(darkMode.css);
+    body{
+        .contain__all{
+
+            .hedaerPage{
+                display: block;
+
+                .introductionPage{
+                    position: relative;
+                    padding-bottom: 1rem;
+                    margin-bottom: 1rem;
+
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        background-color: var(--VeryDarkBlue);
+                        bottom: 0;
+                    }
+                }
+                .bx--modeLight{
+                    justify-content: space-between;
+                }
+            }
+
+            .content-usuary{
+                grid-template-areas: "columnCard-1"
+                                     "columnCard-2"
+                                     "columnCard-3"
+                                     "columnCard-4";
+            }
+
+            .content--overviewToday{
+                .overview{
+                    grid-template-areas: "column-1"
+                                     "column-2"
+                                     "column-3"
+                                     "column-4"
+                                     "column-5"
+                                     "column-6"
+                                     "column-7"
+                                     "column-8";
+                }
+            }
+        }
+    }
+
+    body.darkMode{.introductionPage{ &::before{ background-color: var(--DesaturatedBlue) !important;}}}
+}

@@ -1,0 +1,36 @@
+:root{
+    /*Dark Theme*/
+    --VeryDarkBlue: hsl(230, 17%, 14%); /*(BG)*/
+    --VeryDarkBlueTop: hsl(232, 19%, 15%); /*(Top BG Pattern)*/
+    --DarkDesaturatedBlue: hsl(228, 28%, 20%); /*(Card BG)*/
+    --DesaturatedBlueHover: #333a57;
+    --DesaturatedBlue: hsl(228, 34%, 66%); /*(Text)*/
+    --White: hsl(0, 0%, 100%); /*(Text)*/
+}
+
+body{
+    transition: all .3s;
+}
+body.darkMode{
+    background-color: var(--VeryDarkBlue);
+
+    &::before{
+        background-color: var(--VeryDarkBlueTop);
+    }
+
+    .light{color: var(--White) !important;}
+    .darkColorTxt{color: var(--DesaturatedBlue) !important;}
+
+    .bx-follower{background-color: var(--DarkDesaturatedBlue) !important;}
+    .bx-cards{background-color: var(--DarkDesaturatedBlue) !important;}
+    
+    .bx-follower, .bx-cards{&:hover{background-color: var(--DesaturatedBlueHover) !important;}}
+
+    .bx--modeLight{
+        transition: .3s;
+        &:hover{
+            .mode{color: var(--White) !important;}
+        }
+        
+    }
+}
